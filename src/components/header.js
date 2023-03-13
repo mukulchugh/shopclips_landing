@@ -1,162 +1,38 @@
-import * as React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import { Menu, X } from "react-feather"
-import {
-  Container,
-  Flex,
-  FlexList,
-  Space,
-  NavLink,
-  Button,
-  InteractiveIcon,
-  Nudge,
-  VisuallyHidden,
-} from "./ui"
-import {
-  mobileNavOverlay,
-  mobileNavLink,
-  desktopHeaderNavWrapper,
-  mobileHeaderNavWrapper,
-  mobileNavSVGColorWrapper,
-} from "./header.css"
-import NavItemGroup from "./nav-item-group"
-import BrandLogo from "./brand-logo"
+import React from "react";
+import { Link } from "gatsby";
 
-export default function Header() {
-  const data = useStaticQuery(graphql`
-    query {
-      layout {
-        header {
-          id
-          navItems {
-            id
-            navItemType
-            ... on NavItem {
-              href
-              text
-            }
-            ... on NavItemGroup {
-              name
-              navItems {
-                id
-                href
-                text
-                description
-                icon {
-                  alt
-                  gatsbyImageData
-                }
-              }
-            }
-          }
-          cta {
-            id
-            href
-            text
-          }
-        }
-      }
-    }
-  `)
+import Button from "./button";
+import { Menu } from "@headlessui/react";
+import MobileMenu from "./mobileMenu";
 
-  const { navItems, cta } = data.layout.header
-  const [isOpen, setOpen] = React.useState(false)
 
-  React.useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflowY = "hidden"
-    } else {
-      document.body.style.overflowY = "visible"
-    }
-  }, [isOpen])
-
+const Header = () => {
   return (
-    <header>
-      <Container className={desktopHeaderNavWrapper}>
-        <Space size={2} />
-        <Flex variant="spaceBetween">
-          <NavLink to="/">
-            <VisuallyHidden>Home</VisuallyHidden>
-            <BrandLogo />
-          </NavLink>
-          <nav>
-            <FlexList gap={4}>
-              {navItems &&
-                navItems.map((navItem) => (
-                  <li key={navItem.id}>
-                    {navItem.navItemType === "Group" ? (
-                      <NavItemGroup
-                        name={navItem.name}
-                        navItems={navItem.navItems}
-                      />
-                    ) : (
-                      <NavLink to={navItem.href}>{navItem.text}</NavLink>
-                    )}
-                  </li>
-                ))}
-            </FlexList>
-          </nav>
-          <div>{cta && <Button to={cta.href}>{cta.text}</Button>}</div>
-        </Flex>
-      </Container>
-      <Container className={mobileHeaderNavWrapper[isOpen ? "open" : "closed"]}>
-        <Space size={2} />
-        <Flex variant="spaceBetween">
-          <span
-            className={
-              mobileNavSVGColorWrapper[isOpen ? "reversed" : "primary"]
-            }
-          >
-            <NavLink to="/">
-              <VisuallyHidden>Home</VisuallyHidden>
-              <BrandLogo />
-            </NavLink>
-          </span>
-          <Flex>
-            <Space />
-            <div>
-              {cta && (
-                <Button to={cta.href} variant={isOpen ? "reversed" : "primary"}>
-                  {cta.text}
-                </Button>
-              )}
+<header className="absolute inset-x-0 top-0 z-50 text-black flex lg:grid px-12">
+          <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <div className="flex lg:flex-1">
+              <a href="#" className="-m-1.5 p-1.5">
+                <strong>ShopClips</strong>
+              </a>
             </div>
-            <Nudge right={3}>
-              <InteractiveIcon
-                title="Toggle menu"
-                onClick={() => setOpen(!isOpen)}
-                className={
-                  mobileNavSVGColorWrapper[isOpen ? "reversed" : "primary"]
-                }
-              >
-                {isOpen ? <X /> : <Menu />}
-              </InteractiveIcon>
-            </Nudge>
-          </Flex>
-        </Flex>
-      </Container>
-      {isOpen && (
-        <div className={mobileNavOverlay}>
-          <nav>
-            <FlexList responsive variant="stretch">
-              {navItems?.map((navItem) => (
-                <li key={navItem.id}>
-                  {navItem.navItemType === "Group" ? (
-                    <NavItemGroup
-                      name={navItem.name}
-                      navItems={navItem.navItems}
-                    />
-                  ) : (
-                    <NavLink to={navItem.href} className={mobileNavLink}>
-                      {navItem.text}
-                    </NavLink>
-                  )}
-                </li>
-              ))}
-            </FlexList>
+            <div className="hidden lg:flex lg:gap-x-12">
+            <a href="/about" className="text-sm leading-6 ">About</a>
+              <a href="#features" className="text-sm leading-6 ">Features</a>
+              <a href="#pricing" className="text-sm leading-6">Pricing</a>
+              <a href="#reviews" className="text-sm leading-6 ">Reviews</a>
+              <a href="/blog" className="text-sm leading-6 ">Blog</a>
+              <a href="/contact" className="text-sm leading-6 ">Contact</a>
+            </div>
+            <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center text-[16px] font-semibold gap-4">
+              <button className="bg-white py-2 px-4 rounded-lg text-black">Login</button>
+              <button className="bg-indigo-500 py-2 px-4 rounded-lg text-white">Sign Up</button>
+            </div>
           </nav>
-        </div>
-      )}
-    </header>
-  )
-}
+          <div className="lg:hidden" role="dialog" aria-modal="true">
+            <MobileMenu />
+            </div>
+        </header>
+  );
+};
+
+export default Header;

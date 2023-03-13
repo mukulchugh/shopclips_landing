@@ -1,35 +1,33 @@
-import * as React from "react"
-import Layout from "../components/layout"
-import { Container, Box, Heading, Text, Link, Flex } from "../components/ui"
-import ChevronRight from "../components/chevron-right"
-import * as styles from "../components/404.css"
-import SEOHead from "../components/head"
+import React from "react";
 
-export default function NotFound() {
+import Layout from "../components/layout";
+import Seo from "../components/seo";
+import Button from "../components/button";
+
+const NotFoundPage = () => {
   return (
-    <Layout>
-      <Box paddingY={4}>
-        <Container>
-          <Flex variant="column">
-            <Heading variant="mega" className={styles.heading}>
-              404
-            </Heading>
-            <Heading as="h1">Page not found</Heading>
-            <Flex variant="column" gap={0}>
-              <Text variant="lead" className={styles.text}>
-                Sorry! We couldn’t find the page you were looking for.
-              </Text>
-              <Link to="/" className={styles.link}>
-                <span>Back to home</span>
-                <ChevronRight className={styles.linkChevron} />
-              </Link>
-            </Flex>
-          </Flex>
-        </Container>
-      </Box>
+    <Layout nav={true}>
+      <Seo title="Page Not Found" />
+      <main className="grid min-h-full place-items-center bg-white py-24 px-6 sm:py-32 lg:px-8">
+        <div className="text-center">
+          <p className="text-base font-semibold text-indigo-600">404</p>
+          <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">Page not found</h1>
+          <p className="mt-6 text-base leading-7 text-gray-600">Sorry, we couldn’t find the page you’re looking for.</p>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <a
+              href="#"
+              className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Go back home
+            </a>
+            <a href="#" className="text-sm font-semibold text-gray-900">
+              Contact support <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </main>
     </Layout>
-  )
-}
-export const Head = () => {
-  return <SEOHead title="404: Page not found" />
-}
+  );
+};
+
+export default NotFoundPage;

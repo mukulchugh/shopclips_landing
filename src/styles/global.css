@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @layer utilities {
+    body {
+      @apply text-neutral-900 overflow-x-hidden overscroll-x-none;
+      /* background-color: black; */
+    }
+  }
+}
+
+#hero--bg {
+  background-image: url("../images/77451.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#cta-bg {
+  background-color: #000000;
+  opacity: 1;
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000000 80px ), repeating-linear-gradient( #22222255, #222222 );
+}

@@ -1,33 +1,56 @@
-require("dotenv").config()
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-
 module.exports = {
+  siteMetadata: {
+    title: `ShopClips Live`,
+    description: `Sample description for website landing page.`,
+    siteUrl: `https://shopclips.live`, // Replace with your domain name
+    author: `@mukulchugh`, // Replace with your twitter handle
+  },
   plugins: [
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-json`,
     {
-      resolve: "gatsby-source-sanity",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        projectId: process.env.SANITY_PROJECT_ID,
-        dataset: process.env.SANITY_PROJECT_DATASET,
-        token: process.env.SANITY_READ_TOKEN,
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-image",
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-vanilla-extract",
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "Gatsby Starter Sanity Homepage",
-        short_name: "Gatsby",
-        start_url: "/",
-        // These can be imported once ESM support lands
-        background_color: "#ffe491",
-        theme_color: "#004ca3",
-        icon: "src/favicon.png",
+        name: `data`,
+        path: `${__dirname}/src/data`,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `ShopClips.Live`,
+        short_name: `ShopClips`,
+        start_url: `/`,
+        background_color: `#7C3AED`,
+        theme_color: `#7C3AED`,
+        display: `minimal-ui`,
+        icon: `src/images/favicon.png`, // Replace with your favicon (This path is relative to the root of the site)
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          `GA-TRACKING_ID`, // Replace with your Google Analytics tracking ID
+        ],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-offline`,
   ],
-}
+};
