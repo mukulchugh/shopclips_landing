@@ -3,27 +3,27 @@ import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from
 
 const features = [
   {
-    name: 'Push to deploy',
+    name: 'Blazing Fast',
     description:
-      'Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.',
+      'Optimized for mobile web, Doesn’t affect your site speed or Lighthouse scores. No need to worry about your SEO.',
     icon: CloudArrowUpIcon,
   },
   {
-    name: 'SSL certificates',
+    name: 'One-Click Migration/Import',
     description:
-      'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.',
+      'From your Instagram reels, Tiktok, or upload in bulk from your device. We support all major formats.',
     icon: LockClosedIcon,
   },
   {
-    name: 'Simple queues',
+    name: 'Insightful Analytics',
     description:
-      'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
+      'End to end analytics that cover engagement and conversion funnels. Get a complete overview of your users.',
     icon: ArrowPathIcon,
   },
   {
-    name: 'Advanced security',
+    name: '24/7 Support',
     description:
-      'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
+      'We are available 24/7 to support you for as long as you need. We are here to help you succeed.',
     icon: FingerPrintIcon,
   },
 ]

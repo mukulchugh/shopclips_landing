@@ -7,14 +7,13 @@ import Testimonials from "./testimonials";
 import FAQ from "./faq";
 
 const Layout = ({ children, nav }) => (
-  <>
+  <React.Fragment className="flex flex-col">
     {nav === true ? <Header /> : ""}
     <div>
       <main>{children}</main>
     </div>
-    
     <Footer />
-  </>
+  </React.Fragment>
 );
 
 Layout.propTypes = {
