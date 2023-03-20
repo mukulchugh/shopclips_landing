@@ -2,6 +2,7 @@ import React, {Fragment} from 'react'
 import { Disclosure } from '@headlessui/react'
 
 const FAQ = () => {
+    const [open, setOpen] = React.useState(false)
   return (
 <section className="relative pt-24 pb-28 bg-blueGray-50 overflow-hidden">
           <img className="absolute bottom-0 left-1/2 transform -translate-x-1/2" src="flaro-assets/images/faqs/gradient.svg" alt="" />

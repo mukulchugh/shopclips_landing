@@ -2,9 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import Header from "./header";
 import Footer from "./footer";
-import CTA from "./cta";
-import Testimonials from "./testimonials";
-import FAQ from "./faq";
 
 const Layout = ({ children, nav }) => (
   <React.Fragment className="flex flex-col">
