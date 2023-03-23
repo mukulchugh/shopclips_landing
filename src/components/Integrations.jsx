@@ -1,5 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import {StaticImage} from "gatsby-plugin-image";
 
 const Integrations = () => {
   const data = useStaticQuery(graphql`
@@ -32,7 +33,7 @@ const Integrations = () => {
           </div>
           <div className="flex flex-row flex-wrap xl:gap-12 lg:gap-9 md:gap-18 gap-8 items-center justify-center justify-items-center relative">
             {data.integrations.edges.map(({ node }) => (
-              <img
+              <StaticImage
                 src={node.publicURL}
                 alt={node.name}
                 key={node.id}

@@ -12,7 +12,7 @@ import BasicSection from "../components/BasicSection";
 
 const Index = () => (
   <Layout nav={true}>
-    <Seo />
+    <Seo title="ShopClips" />
     <Hero />
     <BasicSection title="Work with tools you already use" body="Deliver great service experiences fast - without the complexity of
           traditional ITSM solutions. Accelerate critical development work,

@@ -1,4 +1,5 @@
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
+import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import heroImg from "../images/hero_img.png";
 
@@ -87,7 +88,7 @@ const Hero = () => {
             </svg>
           </div>
         </div>
-<img src={heroImg} alt="hero" className="w-full h-full object-cover p-0 m-0 hidden md:block" />
+<StaticImage src={heroImg} alt="hero" className="w-full h-full object-cover p-0 m-0 hidden md:block" />
 
     </section>
         );

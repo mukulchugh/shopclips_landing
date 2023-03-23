@@ -5,7 +5,7 @@ import React from 'react'
 const Terms = () => {
   return (
     <Layout nav={true}>
-        <Seo title="Privacy Policy" />
+        <Seo title="Terms and Conditions" />
         <div className="py-30 h-auto flex flex-col justify-left text-left items-center px-24">
             <div>
                 <React.Fragment>

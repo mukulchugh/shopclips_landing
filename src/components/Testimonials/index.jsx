@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./style.css";
 import useWindowSize from "../../hooks/useWindowSize";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Testimonials = () => {
 
@@ -61,7 +62,7 @@ const Testimonials = () => {
       >
        {data.map((item, index) => (
          <SwiperSlide className="mx-auto w-full h-auto py-16" key={index}>
-         <img className="mx-auto h-6 md:h-12 w-auto " src={item.logo} alt="" />
+         <StaticImage className="mx-auto h-6 md:h-12 w-auto " src={item.logo} alt="" />
          <figure className="mt-4 md:mt-10">
            <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
              <div className="flex w-full justify-center items-center">

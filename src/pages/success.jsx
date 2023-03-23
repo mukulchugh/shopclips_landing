@@ -6,7 +6,7 @@ import Button from "../components/Button";
 const Success = () => {
   return (
     <Layout nav={true}>
-      <Seo title="Page Not Found" />
+      <Seo title="Success" />
       <main className="grid min-h-full place-items-center bg-white py-24 px-6 sm:py-32 lg:px-8">
         <div className="text-center">
           <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
