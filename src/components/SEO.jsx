@@ -30,7 +30,7 @@ function Seo({ lang, meta, title, description, image, url, location }) {
       htmlAttributes={{
         lang,
       }}
-      title={`${siteTitle} | ${location.pathname === "/" ? site.siteMetadata.description : "ShopClips"}`}
+      title={`${siteTitle} | ${location?.pathname === "/" ? site.siteMetadata.description : "ShopClips"}`}
       meta={[
         {
           name: `description`,

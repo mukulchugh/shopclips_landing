@@ -76,7 +76,7 @@ const Header = ({location}) => {
            {data.map((item, index) => (
              <Link
                key={index}
-               to={location.pathname === '/' ? item.link : `/${item.link}/`}
+               to={location?.pathname === '/' ? item.link : `/${item.link}/`}
                className='text-base font-medium text-gray-900 leading-6 hover:text-gray-700'
              >
                {item.name}
@@ -85,10 +85,10 @@ const Header = ({location}) => {
              </div>
              <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center text-[16px] font-semibold gap-4">
                <button onClick={() => {
-                 typeof window !== `undefined` ? window.location.href = 'https://app.shopclips.io/login' : null;
+                 typeof window !== `undefined` ? window?.location.href = 'https://app.shopclips.io/login' : null;
                }} className="py-2 px-4 rounded-lg text-black">Login</button>
                <button onClick={() => {
-                  typeof window !== `undefined` ? window.location.href = 'https://app.shopclips.io/signup' : null;
+                  typeof window !== `undefined` ? window?.location.href = 'https://app.shopclips.io/signup' : null;
                }} className="bg-indigo-500 py-2 px-4 rounded-lg text-white">Sign Up</button>
                </div>
                </nav>
