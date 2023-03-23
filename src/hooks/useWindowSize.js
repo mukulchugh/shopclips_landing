@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
-import { isBrowser } from "utils/index";
-
 import useRafState from "./useRafState";
+
+export const isBrowser = typeof window !== "undefined";
+export const setCSSVariable = (property, value) =>
+  isBrowser
+    ? document.documentElement.style.setProperty(property, value)
+    : null;
+
 
 const useWindowSize = (initialWidth = Infinity, initialHeight = Infinity) => {
   const [state, setState] = useRafState({

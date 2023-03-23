@@ -48,11 +48,12 @@ const Header = () => {
 
 
   return (
-  <header className={`fixed w-full z-30 inset-x-0 md:bg-opacity-90 transition lg:grid lg:px-12 px-4 duration-300 ease-in-out ${!top && 'bg-white backdrop-blur-sm shadow-md h-min'}`}>
-     <nav className="flex items-center justify-between p-4 lg:px-8" aria-label="Global">
+  <header className={`fixed w-full z-30 inset-x-0 md:bg-opacity-90 transition  lg:grid lg:px-12 px-4 duration-300 ease-in-out ${!top && 'bg-white backdrop-blur-sm shadow-md h-min'}`}>
+     <nav className="flex items-center justify-between md:p-4 lg:px-8" aria-label="Global">
        <div className="flex lg:flex-1">         
        <div className="flex items-center justify-between w-full lg:w-auto">
-        <div>
+        <div className="flex justify-between w-full mt-2 items-center">
+          <div>
           <a href="/" className="flex items-center">
             <img
               className="h-8 w-auto sm:h-8"
@@ -63,10 +64,12 @@ const Header = () => {
               ShopClips
             </span>
           </a>
-        </div>
-        <div className="lg:hidden" role="dialog" aria-modal="true">
+          </div>
+          <div className="lg:hidden">
           <MobileMenu />
         </div>
+        </div>
+        
       </div>
            </div>
            <div className="hidden lg:flex lg:gap-x-12">

@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./style.css";
+import useWindowSize from "../../hooks/useWindowSize";
 
 const Testimonials = () => {
 
@@ -42,7 +43,7 @@ const Testimonials = () => {
       <div className="max-w-7xl mx-auto py-4 px-4 sm:py-6 sm:px-6 lg:px-8">
             <div className="lg:text-center">
                 <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Customer Feedback</h2>
-                <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                <p className="mt-2 text-lg md:text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                     What our customers are saying
                 </p>
             </div>
@@ -52,7 +53,7 @@ const Testimonials = () => {
 
     <Swiper
         cssMode={true}
-        navigation={true}
+        navigation={useWindowSize().width > 768 ? true : false}
         pagination={true}
         mousewheel={true}
         keyboard={true}
@@ -60,11 +61,11 @@ const Testimonials = () => {
       >
        {data.map((item, index) => (
          <SwiperSlide className="mx-auto w-full h-auto py-16" key={index}>
-         <img className="mx-auto h-12" src={item.logo} alt="" />
-         <figure className="mt-10">
+         <img className="mx-auto h-6 md:h-12 w-auto " src={item.logo} alt="" />
+         <figure className="mt-4 md:mt-10">
            <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
              <div className="flex w-full justify-center items-center">
-              <p className="w-1/2">
+              <p className="md:w-1/2 text-sm md:text-lg w-[90%]">
               {item.quote}
               </p>
              </div>

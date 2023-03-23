@@ -10,9 +10,14 @@
 
 .swiper .swiper-button-prev {
     color: #4f46e5 !important;
+    width: 1px !important;
+    height: 1px !important;
   }
 
 .swiper .swiper-button-next {
     color: #8586e9ae !important;
+    width: 1px !important;
+    height: 1px !important;
+    font-size: 2px  !important;
   }
   
