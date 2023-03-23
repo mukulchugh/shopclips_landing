@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-
 function Seo({ lang, meta, title, description, image, url }) {
   const { site } = useStaticQuery(
     graphql`
@@ -31,7 +30,7 @@ function Seo({ lang, meta, title, description, image, url }) {
       htmlAttributes={{
         lang,
       }}
-      title={siteTitle}
+      title={`${siteTitle} | ${location.pathname === "/" ? site.siteMetadata.description : "ShopClips"}`}
       meta={[
         {
           name: `description`,

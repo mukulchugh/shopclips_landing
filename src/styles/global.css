@@ -4,14 +4,52 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   @layer utilities {
+    html {
+      @apply scroll-smooth;
+    }
     body {
       @apply text-neutral-900 overflow-x-hidden overscroll-x-none;
-      /* background-color: black; */
+      @apply font-sans;
+      @apply bg-neutral-100;
+      @apply text-sm;
+      @apply font-normal;
+      @apply leading-normal;
+      @apply tracking-normal;
+      @apply text-neutral-900;
+      @apply bg-white;
+      @apply antialiased;
+    }
+    h1 {
+      @apply text-4xl;
+      @apply font-bold;
+    }
+    h2 {
+      @apply text-3xl;
+      @apply font-bold;
+    }
+    h3 {
+      @apply text-2xl;
+      @apply font-bold;
+    }
+    h4 {
+      @apply text-xl;
+      @apply font-semibold;
+    }
+    h5 {
+      @apply text-lg;
+      @apply font-semibold;
+    }
+    h6 {
+      @apply text-sm;
+      @apply font-semibold;
     }
   }
+ 
 }
+
 
 #hero--bg {
   background-image: url("../images/77451.svg");

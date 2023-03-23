@@ -12,36 +12,25 @@ module.exports = {
         "2xl": "10rem",
       },
     },
-    // colors: {
-    //   transparent: "transparent",
-    //   current: "currentColor",
-    //   white: "#FFFFFF",
-    //   black: "#000000",
-    //   primary: {
-    //     600: "#0876DD",
-    //     100: "#E0F2FE",
-    //   },
-    //   secondary: {
-    //     600: "#29D2D3",
-    //     100: "#CFFAFE",
-    //   },
-    //   neutral: {
-    //     900: "#111827",
-    //     800: "#1F2937",
-    //     700: "#374151",
-    //     600: "#4B5563",
-    //     500: "#6B7280",
-    //     400: "#9CA3AF",
-    //     300: "#D1D5DB",
-    //     200: "#E5E7EB",
-    //     100: "#F3F4F6",
-    //     50: "#F9FAFB",
-    //   },
-    // },
     fontFamily: {
       sans: ["Poppins", "sans-serif"],
     },
-    fontSize: {
+    
+    boxShadow: {
+      xs: "0px 2px 8px -3px rgba(28, 44, 64, 0.16)",
+      sm: "0px 4px 12px -3px rgba(28, 44, 64, 0.1)",
+      md: "0px 8px 16px -4px rgba(28, 44, 64, 0.08)",
+      lg: "0px 10px 20px rgba(28, 44, 64, 0.08)",
+      xl: "4px 12px 24px rgba(28, 44, 64, 0.08)",
+      "2xl": "8px 16px 48px rgba(28, 44, 64, 0.12)",
+    },
+    extend: {
+      spacing: {
+        18: "72px",
+        22: "88px",
+        30: "120px",
+      },
+      fontSize: {
       "display-4xl": [
         "80px",
         {
@@ -127,21 +116,7 @@ module.exports = {
         },
       ],
     },
-    boxShadow: {
-      xs: "0px 2px 8px -3px rgba(28, 44, 64, 0.16)",
-      sm: "0px 4px 12px -3px rgba(28, 44, 64, 0.1)",
-      md: "0px 8px 16px -4px rgba(28, 44, 64, 0.08)",
-      lg: "0px 10px 20px rgba(28, 44, 64, 0.08)",
-      xl: "4px 12px 24px rgba(28, 44, 64, 0.08)",
-      "2xl": "8px 16px 48px rgba(28, 44, 64, 0.12)",
-    },
-    extend: {
-      spacing: {
-        18: "72px",
-        22: "88px",
-        30: "120px",
-      },
-    },
+  },
   },
   plugins: [
     require('@tailwindcss/forms'),
