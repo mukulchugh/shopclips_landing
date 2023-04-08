@@ -27,6 +27,7 @@ const pricingData = [
     features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4", "Feature 5"],
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     isEnterprise: true,
+    
   },
 ];
 
@@ -75,6 +76,11 @@ export default function Pricing() {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-4">
           {pricingData.map((plan, i) => (
             <div key={i} className={`${plan?.isRecommended ? "outline outline-2 outline-indigo-500" : ""} relative z-0 shadow-lg flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow`}>
+{
+  plan?.isRecommended && <p className="bg-indigo-500 z-50 py-1 top-0 -mt-10 text-white mb-4 w-full rounded-md">
+Recommended
+   </p>
+}
   <h3 className="mb-4 text-2xl font-semibold">{plan.title}</h3>
   <p className="font-light text-gray-500 sm:text-sm">
    {plan.description}

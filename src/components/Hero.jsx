@@ -2,7 +2,7 @@ import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import React from "react";
 import heroImg from "../images/hero_img.png";
 
-const Hero = () => {
+const Hero = ({Heading, Description}) => {
         return (  
             <section className="text-black h-auto " id="hero-bg">
                 <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -45,9 +45,9 @@ const Hero = () => {
         <div className="relative isolate px-6 pt-14 lg:px-8">
 <div>  
   <div className="mx-auto max-w-screen-lg  py-12 md:py-32 sm:py-48 lg:py-32">
-            <div className="text-center">
-              <h1 className="text-display-xs font-bold tracking-tight text-black md:text-display-2xl">Enrich Your Customer Experience with us</h1>
-              <p className="mt-6 md:text-body-md md:leading-8 text-gray-400 text-body-xs md:px-24">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+            <div className="text-center flex flex-col justify-center items-center">
+              <h1 className="text-display-xs font-bold tracking-tight text-black md:text-display-xl w-3/4">{Heading}</h1>
+              <p className="mt-6 md:text-body-md md:leading-8 text-gray-400 text-body-xs md:px-24">{Description}</p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
           <div className="mx-auto max-w-screen-md sm:text-center">
             <form action="#">
@@ -60,10 +60,8 @@ const Hero = () => {
                   <input className="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg focus:ring-primary-500 focus:border-primary-500 " placeholder="Enter your email" type="email" id="email" required />
                 </div>
                 <div>
-                  <button type="submit" className="flex items-center py-3 px-5 w-full justify-center text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-indigo-500 border-indigo-500 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 whitespace-nowrap">Get Started  <ArrowRightIcon 
-                    className="w-5 h-5 ml-2"
-
-                    /> </button>
+                  <button type="submit" className="flex items-center py-3 px-5 w-full justify-center text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-indigo-500 border-indigo-500 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 whitespace-nowrap">Get Started <ArrowRightIcon 
+                    className="w-5 h-5 ml-2"/> </button>
                 </div>
               </div>
               <div className="mx-auto max-w-screen-sm text-sm text-left text-gray-500 newsletter-form-footer dark:text-gray-300">We care about the protection of your data. <a href="#" className="font-medium text-primary-600 dark:text-primary-500 hover:underline">Read our Privacy Policy</a>.</div>

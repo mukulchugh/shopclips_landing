@@ -18,8 +18,8 @@ const data = [
     link: "#pricing",
   },
   {
-    name: "Reviews",
-    link: "#reviews",
+    name: "How It Works?",
+    link: "#how-it-works",
   },
   {
     name: "Contact",

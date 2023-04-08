@@ -13,7 +13,9 @@ import BasicSection from "../components/BasicSection";
 const Index = () => (
   <Layout nav={true}>
     <Seo title="ShopClips" />
-    <Hero />
+    <Hero Heading="Shoppable Clips - ShopClips for Shopify" Description="
+      Add shoppable videos to your shopify store to boost engagement, trust and sales with our interactive video platform.
+    " />
     <BasicSection title="Work with tools you already use" body="Deliver great service experiences fast - without the complexity of
           traditional ITSM solutions. Accelerate critical development work,
           eliminate toil, and deploy changes with ease." features={[
