@@ -21,10 +21,10 @@ const features = [
     icon: ArrowPathIcon,
   },
   {
-    name: '24/7 Support',
+    name: 'Easy Integration',
     description:
-      'We are available 24/7 to support you for as long as you need. We are here to help you succeed.',
-    icon: FingerPrintIcon,
+      'Embed your shoppable videos on any page of your website. No need to worry about your SEO.',
+    icon: FingerPrintIcon,   
   },
 ]
 
