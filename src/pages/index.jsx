@@ -39,7 +39,7 @@ const Index = () => (
           traditional ITSM solutions." />
     <Features />
     <CTA />
-    <Testimonials />
+    {/* <Testimonials /> */}
     <Pricing />
     <Integrations />
     <FAQ />

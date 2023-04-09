@@ -1,12 +1,13 @@
 import React from "react"
 import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
+import { EnvelopeIcon } from "@heroicons/react/20/solid"
 
 const features = [
   {
     name: 'Blazing Fast',
     description:
       'Optimized for mobile web, Doesn’t affect your site speed or Lighthouse scores. No need to worry about your SEO.',
-    icon: CloudArrowUpIcon,
+    icon: EnvelopeIcon,
   },
   {
     name: 'One-Click Migration/Import',
