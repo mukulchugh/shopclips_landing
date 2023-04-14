@@ -90,7 +90,7 @@ const Header = ({location}) => {
              </div>
              <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center text-[16px] font-semibold gap-4">
                {/* <Link to="/" className="py-2 px-4 rounded-lg text-black">Login</Link> */}
-               <Link to="/" className="bg-indigo-500 py-2 px-4 rounded-lg text-white">Join Waitlist</Link>
+               <Link to="/contact" className="bg-indigo-500 py-2 px-4 rounded-lg text-white">Join Waitlist</Link>
                </div>
                </nav>
           

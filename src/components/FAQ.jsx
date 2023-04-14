@@ -66,7 +66,7 @@ const FAQ = () => {
               </div>
               <p className="text-gray-600 text-center font-medium">
                 <span>Still have any questions? </span>
-                <a className="font-semibold text-indigo-600 hover:text-indigo-700" href="#">Contact us</a>
+                <a className="font-semibold text-indigo-600 hover:text-indigo-700" href="/contact">Contact us</a>
               </p>
             </div>
 

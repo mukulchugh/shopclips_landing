@@ -1,4 +1,5 @@
 import React from 'react'
+import phone_view from "../images/phone_view_prod_ss.png";
 
 const BasicSection = ({reverse=false, title, body, features, end}) => {
   return (
@@ -45,9 +46,10 @@ const BasicSection = ({reverse=false, title, body, features, end}) => {
         </p>
       </div>
       <img
-        className={`${!reverse ? 'order-first' : 'order-last'} hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex`}
-        src="https://img.freepik.com/free-vector/preferences-concept-illustration_114360-1384.jpg?w=2000"
-        alt="dashboard feature image"
+        className={`${!reverse ? 'order-first' : 'order-last'} hidden h-4/6 w-auto mb-4 ml-18 rounded-lg lg:mb-0 lg:flex`}
+        // src="https://img.freepik.com/free-vector/preferences-concept-illustration_114360-1384.jpg?w=2000"
+        src={phone_view}
+        alt="Phone View ShopClips image"
       />
     </div>
     </div>

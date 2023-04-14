@@ -1,32 +1,32 @@
 import React from "react"
 import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
-import { EnvelopeIcon } from "@heroicons/react/20/solid"
+import { ArrowUpOnSquareIcon, ArrowUpTrayIcon, BoltIcon, ChartBarIcon, ChartPieIcon, ClipboardDocumentCheckIcon, EnvelopeIcon } from "@heroicons/react/20/solid"
 
 const features = [
   {
     name: 'Blazing Fast',
     description:
       'Optimized for mobile web, Doesn’t affect your site speed or Lighthouse scores. No need to worry about your SEO.',
-    icon: EnvelopeIcon,
+    icon: BoltIcon,
   },
   {
     name: 'One-Click Migration/Import',
     description:
       'From your Instagram reels, Tiktok, or upload in bulk from your device. We support all major formats.',
-    icon: LockClosedIcon,
+    icon: ArrowUpTrayIcon,
   },
   {
     name: 'Insightful Analytics',
     description:
       'End to end analytics that cover engagement and conversion funnels. Get a complete overview of your users.',
-    icon: ArrowPathIcon,
+    icon: ChartBarIcon,
   },
   {
     name: 'Easy Integration',
     description:
       'Download Shopify App -> Upload videos -> Arrange them in an order -> Tag Products -> Ready for launch!',
       //'Embed your shoppable videos on any page of your website. No need to worry about your SEO.',
-    icon: FingerPrintIcon,   
+    icon: ClipboardDocumentCheckIcon,   
   },
 ]
 
@@ -35,7 +35,7 @@ export default function Features() {
     <div className="py-12 sm:py-14 text-white mt-12" id="features">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-indigo-600">features in brief</h2>
+          <h2 className="text-base font-semibold leading-7 text-indigo-600">features in short</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Get Started by yourself in under 10 minutes!
           </p>

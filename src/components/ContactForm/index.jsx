@@ -26,29 +26,39 @@ function ContactForm() {
       <section className="h-auto py-32">
         <div className="container mx-auto px-6 ">
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-8">
-            Contact Us
+            Join our Waitlist
           </h2>
           <p className="text-gray-600 text-center ">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at
-            ipsum eu nunc commodo posuere et sit amet ligula.
+          Welcome to the world of video commerce! The inevitable future of online shopping! {<br/>}
+          Hehe! And yes, using Shopclips is indeed as fun as it sounds!
           </p>
                 <div className="flex justify-center items-center">
                     <form className="shadow rounded  lg:px-28 px-8" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="523c5f1e-cc1c-418d-9ef5-13b50626245b" />
-                    <div className="md:flex items-center mt-12">
+                    <div className="md:flex items-center mt-12 justify-center">
                         <div className="md:w-72 flex flex-col">
-                            <label className="text-base font-semibold leading-none text-gray-800">Full Name</label>
+                            <label className="text-base font-semibold leading-none text-gray-800">Full Name*</label>
                             <input required  aria-label="Please input name" type="text" name="Full Name" className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100" placeholder="John Doe"  />
                         </div>
                         <div className="md:w-72 flex flex-col md:ml-6 md:mt-0 mt-4">
-                            <label className="text-base font-semibold leading-none text-gray-800">Email Address</label>
+                            <label className="text-base font-semibold leading-none text-gray-800">Email Address*</label>
                             <input required aria-label="Please input email address" type="email" name="Email" className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100" placeholder="john@doe.com" />
                         </div>
                     </div>
-                    <div className="md:flex items-center mt-8">
+                    <div className="md:flex items-center mt-8 justify-center">
                         <div className="md:w-72 flex flex-col">
-                            <label className="text-base font-semibold leading-none text-gray-800">Company name</label>
+                            <label className="text-base font-semibold leading-none text-gray-800">Company name*</label>
                             <input required  aria-label="Please input company name" type="text" name="Company" className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 " placeholder="ACME,Inc." />
+                        </div>
+                        <div className="md:w-72 flex flex-col md:ml-6 md:mt-0 mt-4">
+                            <label className="text-base font-semibold leading-none text-gray-800">Website</label>
+                            <input aria-label="Please input website" type="website" name="Website" className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 " placeholder="ACME.com" />
+                        </div>
+                    </div>
+                    <div className="md:flex items-center mt-8 justify-center">
+                        <div className="md:w-72 flex flex-col">
+                            <label className="text-base font-semibold leading-none text-gray-800">Phone Number</label>
+                            <input aria-label="Please input phone number" type="number" name="Number" className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 " placeholder="7888955543" />
                         </div>
                         <div className="md:w-72 flex flex-col md:ml-6 md:mt-0 mt-4">
                             <label className="text-base font-semibold leading-none text-gray-800">Country</label>
@@ -132,9 +142,9 @@ function ContactForm() {
                         </div>
                     </div>
                     <div>
-                        <div className="w-full flex flex-col mt-8">
-                            <label className="text-base font-semibold leading-none text-gray-800">Message</label>
-                            <textarea required aria-label="leave a message" name="Message" className="h-36 text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 resize-none" defaultValue={""} />
+                        <div className="w-full flex flex-col mt-8 justify-center">
+                            <label className="text-base font-semibold leading-none text-gray-800 flex justify-center">Any Message?</label>
+                            <textarea aria-label="leave a message" name="Message" className="h-36 text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 resize-none" defaultValue={""} />
                         </div>
                     </div>
 
