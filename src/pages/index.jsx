@@ -9,39 +9,27 @@ import Seo from "../components/SEO";
 import FAQ from "../components/FAQ";
 import Pricing from "../components/Pricing";
 import BasicSection from "../components/BasicSection";
+import { ArrowDownRightIcon, ArrowRightIcon } from "@heroicons/react/20/solid";
 
 const Index = () => (
   <Layout nav={true}>
     <Seo title="ShopClips" />
-    <Hero Heading="Shoppable Clips - ShopClips for Shopify" Description="
+    <Hero Heading={<><div className="flex items-center">Shoppable Clips <ArrowRightIcon width={45} className="mx-4" />  ShopClips <br/> </div><>for Shopify</></>} Description="
       Add shoppable videos to your shopify store to boost engagement, trust and sales with our interactive video platform.
     " />
-    <BasicSection title="Work with tools you already use" body="Deliver great service experiences fast - without the complexity of
-          traditional ITSM solutions. Accelerate critical development work,
-          eliminate toil, and deploy changes with ease." features={[
-            "Continuous integration and deployment",
-            "Development workflow",
-            "Infrastructure as code",
-            "Infrastructure automation",
-            "Infrastructure as code",
-          ]} end="Deliver great service experiences fast - without the complexity of
-          traditional ITSM solutions." />
-     <BasicSection reverse title="Work with tools you already use" 
-     body="Deliver great service experiences fast - without the complexity of traditional ITSM solutions. Accelerate critical development work, eliminate toil, and deploy changes with ease."
-     features={[
-            "Continuous integration and deployment",
-            "Development workflow",
-            "Infrastructure as code",
-            "Infrastructure automation",
-            "Infrastructure as code",
-          ]} 
-          end="Deliver great service experiences fast - without the complexity of
-          traditional ITSM solutions." />
+    <BasicSection title="Boost your Shopify store sales with interactive and shoppable videos" 
+    body="ShopClips can take your shopify store to the next level by adding shoppable videos, which simplifies the process of finding and purchasing your products, resulting in a better shopping experience for your customers." features={[
+            "Convince customers with your best content",
+            "Increase time on site and engagement",
+            "Add videos to any page",
+            "No impact on site load time",
+            "Complete customisation and branding",
+          ]} end="Let your products come alive and sell themselves!" />
     <Features />
-    <CTA />
+    {/* <CTA /> */}
     {/* <Testimonials /> */}
     <Pricing />
-    <Integrations />
+    {/* <Integrations /> */}
     <FAQ />
   </Layout>
 );

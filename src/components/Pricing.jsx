@@ -4,28 +4,29 @@ import { Switch } from "@headlessui/react";
 const pricingData = [
   {
     title: "Starter",
-    price: "10",
-    features: ["Feature 1", "Feature 2", "Feature 3"],
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    price: "25",
+    features: ["Shopify Admin App", "Homepage Video Carousel", "Organise Video Carousel", "Analytics Dashboard"],
+    description: "2500 Video Views/month Unlimited Videos",
   },
   {
     title: "Growth",
-    price: "20",
-    features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4"],
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    price: "95",
+    features: ["Shopify Admin App", "Homepage Video Carousel", "Organise Video Carousel", "Analytics Dashboard", "Live chat support"],
+    description: "10,000 Video Views/month Unlimited Videos",
+    isRecommended: true,
+
   },
   {
     title: "Scale",
-    price: "50",
-    features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4", "Feature 5"],
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    isRecommended: true,
+    price: "390",
+    features: ["Shopify Admin App", "Homepage Video Carousel", "Organise Video Carousel", "Analytics Dashboard", "Live chat support", "Customization"],
+    description: "50,000 Video Views/month Unlimited Videos",
   },
   {
     title: "Enterprise",
     price: "50",
-    features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4", "Feature 5"],
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    features: ["Shopify Admin App", "Homepage Video Carousel", "Organise Video Carousel", "Analytics Dashboard", "Live chat support", "Full Customization", "Enterprise Security"],
+    description: "100,000 Video Views/month Unlimited Videos",
     isEnterprise: true,
     
   },
@@ -51,26 +52,31 @@ export default function Pricing() {
         <div className="pb-10">
           <Switch.Group
             as="div"
-            className="flex items-center justify-center"
+            className="flex items-center justify-center ml-52"
           >
             <Switch.Label className="mr-4 text-lg">Monthly</Switch.Label>
-            <Switch
+           <div className="flex items-center gap-4">
+             <div>
+              <Switch
               checked={isMonthly}
               onChange={setIsMonthly}
               className={classNames(
-                isMonthly ? "bg-indigo-600" : "bg-gray-200",
+                isMonthly ?  "bg-gray-200" : "bg-indigo-600",
                 "relative inline-flex items-center h-6 rounded-full w-11 transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               )}
-            >
+            > 
               <span className="sr-only">Use setting</span>
               <span
                 className={classNames(
-                  isMonthly ? "translate-x-6" : "translate-x-1",
+                  isMonthly ? "translate-x-1" : "translate-x-6",
                   "inline-block w-4 h-4 transform bg-white rounded-full transition-transform ease-in-out duration-200"
                 )}
               />
             </Switch>
             <Switch.Label className="ml-4 text-lg">Yearly</Switch.Label>
+            </div>
+            <p className="text-indigo-500">Billed once per year - <strong>Save 10%</strong></p>
+           </div>
           </Switch.Group>
         </div>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-4">
@@ -94,7 +100,7 @@ Recommended
         ) : (
          <React.Fragment>
            <span className="mr-2 text-5xl font-extrabold">$
-          {isMonthly ? plan.price : (plan.price * 12).toFixed(0).toString()}
+          {isMonthly ? plan.price : ((plan.price * 12) - (plan.price * 1.2)).toFixed(0).toString()}
                 </span>
                 <span className="text-gray-500 ">
                   {isMonthly ? "/month" : "/year"}

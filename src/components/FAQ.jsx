@@ -5,20 +5,20 @@ import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline'
 
 const data = [
   {
-    question: 'What is the best way to contact you?',
-    answer: 'You can contact us via email at or via phone at 1-800-555-5555.'
+    question: 'Why Video?',
+    answer: 'Humans naturally relate to videos 10x more than text and some basic photos. Not only do videos grab attention, they keep it. Because they can combine movement, sound, and text, videos can pack a lot of information into a smaller package.'
   },
   {
-    question: 'How long does it take to get a response?',
-    answer: 'We try to respond to all emails within 24 hours.'
+    question: 'Will this have an impact on the load time of the website?',
+    answer: 'Nope. As the videos are loaded on demand when the user clicks on the video. The videos are served via the CDNs (Content Delivery Networks) which doesn’t impact the website loading time at all.'
   },
   {
-    question: 'How do I know if you received my email?',
-    answer: 'We will send you an email to confirm that we received your message.'
+    question: 'How much increase in the conversion can I expect after integrating Shopclips plugin?',
+    answer: 'Shoppable Short Clips have a conversion rate upto 10-15%. At some places, the conversions has increased from 1.8% to whopping 21%!!! More than 10x growth! So it is possible! It’s just we have to keep trying until we make it!'
   },
   {
-    question: 'How do I know if you received my email?',
-    answer: 'We will send you an email to confirm that we received your message.'
+    question: 'I don’t get much traffic on my online store. Should I integrate shoppable videos?',
+    answer: 'Yes, definitely. Video shopping helps in increasing the user engagement and retention. We recommend you to start integrating shoppable videos as early as possible.'
   },
 
 ]
@@ -33,7 +33,7 @@ const FAQ = () => {
       leaveTo: 'opacity-0 translate-y-1',
     };
   return (
-<section className="relative pt-24 pb-28 bg-blueGray-50 overflow-hidden">
+<section className="relative pt-24 pb-28 bg-blueGray-50 overflow-hidden" id="faqs">
           <div className="relative z-10 container px-4 mx-auto">
             <div className="md:max-w-4xl mx-auto">
               <p className="mb-2 md:mb-7 text-sm text-indigo-600 text-center font-semibold uppercase tracking-px">Have any questions?</p>

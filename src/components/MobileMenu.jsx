@@ -3,34 +3,27 @@ import { Menu, Transition } from '@headlessui/react'
 import { Fragment, useEffect, useRef, useState } from 'react'
 import { Bars3CenterLeftIcon, Bars3Icon, ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Bars3BottomLeftIcon } from "@heroicons/react/24/outline";
+import { Link } from "gatsby";
 
 export default function MobileMenu() {
   const data = [
-    {
-      name: "About",
-      href: "#",
-    },
-    {
-      name: "Contact",
-      href: "#",
-    },
-    {
-      name: "Blog",
-      href: "#",
-    },
-    {
-      name: "Pricing",
-      href: "#",
-    },
-    {
-      name: "Features",
-      href: "#",
-    },
-    {
-      name: "Reviews",
-      href: "#",
-    },
-
+   
+   {
+    name: "How It Works?",
+    link: "#how-it-works",
+  },
+  {
+    name: "Features",
+    link: "#features",
+  },
+  {
+    name: "Pricing",
+    link: "#pricing",
+  },
+  {
+    name: "FAQs",
+    link: "#faqs",
+  },
   ];
 
   return (
@@ -57,14 +50,14 @@ export default function MobileMenu() {
              {data.map((item, index) => (
                <Menu.Item key={index}>
                {({ active }) => (
-                 <a
-                   href={item.href}
+                   <Link
+                   to={item.href}
                    className={`${
                      active ? 'bg-gray-100 text-gray-900' : 'text-gray-700'
                    } group flex rounded-md items-center w-full px-2 py-2 text-[14px] font-semibold text-sm]`}
                  >
                     {item.name}
-                 </a>
+                 </Link>
                )}
              </Menu.Item>
               ))}

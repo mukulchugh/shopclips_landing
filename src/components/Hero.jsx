@@ -44,11 +44,11 @@ const Hero = ({Heading, Description}) => {
           </div>
         <div className="relative isolate px-6 pt-14 lg:px-8">
 <div>  
-  <div className="mx-auto max-w-screen-lg  py-12 md:py-32 sm:py-48 lg:py-32">
+  <div className="mx-auto max-w-screen-lg  py-12 md:py-32 sm:py-48 lg:py-24 lg:pb-8">
             <div className="text-center flex flex-col justify-center items-center">
-              <h1 className="text-display-xs font-bold tracking-tight text-black md:text-display-xl w-3/4">{Heading}</h1>
-              <p className="mt-6 md:text-body-md md:leading-8 text-gray-400 text-body-xs md:px-24">{Description}</p>
-              <div className="mt-10 flex items-center justify-center gap-x-6">
+              <h1 className="text-display-[4px] font-bold tracking-tight text-black md:text-display-xl">{Heading}</h1>
+              <p className="mt-6 md:text-body-xl md:leading-8 text-gray-400 text-body-xs md:px-24">{Description}</p>
+              {/* <div className="mt-10 flex items-center justify-center gap-x-6">
           <div className="mx-auto max-w-screen-md sm:text-center">
             <form action="#">
               <div className="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
@@ -67,13 +67,13 @@ const Hero = ({Heading, Description}) => {
               <div className="mx-auto max-w-screen-sm text-sm text-left text-gray-500 newsletter-form-footer dark:text-gray-300">We care about the protection of your data. <a href="#" className="font-medium text-primary-600 dark:text-primary-500 hover:underline">Read our Privacy Policy</a>.</div>
             </form>
           </div>
-              </div>
+              </div> */}
             </div>
           </div>
           </div>
-          <div>
-</div>
-<div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+          {/* <div>
+</div> */}
+{/* <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
             <svg className="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]" viewBox="0 0 1155 678">
               <path fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)" fillOpacity=".3" d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z" />
               <defs>
@@ -83,7 +83,7 @@ const Hero = ({Heading, Description}) => {
                 </linearGradient>
               </defs>
             </svg>
-          </div>
+          </div> */}
         </div>
 <img src={heroImg} alt="hero" className="w-full h-full bg-transparent object-cover p-0 m-0 hidden md:block" />
 

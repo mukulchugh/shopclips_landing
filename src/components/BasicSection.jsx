@@ -2,7 +2,7 @@ import React from 'react'
 
 const BasicSection = ({reverse=false, title, body, features, end}) => {
   return (
-    <section className="bg-white">
+    <section className="bg-white" id="how-it-works">
   <div className="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-12 lg:px-6">
     {/* Row */}
     <div className="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">

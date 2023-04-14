@@ -1,12 +1,13 @@
 import React from "react";
 import FooterCTA from "./FooterCTA";
+import shopclips_logo from "../images/logo_light_shopclips.png";
 
 
 const Footer = () => {
   return <footer className="bg-white">
     <FooterCTA/>
   <div className="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
-    <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
+    {/* <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
       <div>
         <h3 className="mb-6 text-sm font-semibold text-gray-900 uppercase ">
           Company
@@ -137,7 +138,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </div> */}
     <hr className="my-6 border-gray-200 sm:mx-auto  lg:my-8" />
     <div className="text-center">
       <a
@@ -145,16 +146,16 @@ const Footer = () => {
         className="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 gap-2"
       >
           <img
-              className="h-8 w-auto sm:h-10"
-              src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-              alt="Workflow"
+              className="h-12 w-auto m-0 p-0 -mr-3"
+              src={shopclips_logo}
+              alt="logo"
             />
         ShopClips
       </a>
       <span className="block text-sm text-center text-gray-500 ">
         © {new Date().getFullYear()} ShopClips™. All Rights Reserved.
       </span>
-      <ul className="flex justify-center mt-5 space-x-5">
+      {/* <ul className="flex justify-center mt-5 space-x-5">
         <li>
           <a
             href="#"
@@ -246,7 +247,7 @@ const Footer = () => {
             </svg>
           </a>
         </li>
-      </ul>
+      </ul> */}
     </div>
   </div>
 </footer>
