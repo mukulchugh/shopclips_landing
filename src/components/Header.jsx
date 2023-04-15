@@ -12,19 +12,19 @@ const data = [
   // },
   {
     name: "How It Works?",
-    link: "#how-it-works",
+    link: "how-it-works",
   },
   {
     name: "Features",
-    link: "#features",
+    link: "features",
   },
   {
     name: "Pricing",
-    link: "#pricing",
+    link: "pricing",
   },
   {
     name: "FAQs",
-    link: "#faqs",
+    link: "faqs",
   },
   // {
   //   name: "Contact",
@@ -38,7 +38,7 @@ const data = [
 
 
 
-const Header = ({location}) => {
+const Header = () => {
 
   const [top, setTop] = useState(true);
 
@@ -51,17 +51,15 @@ const Header = ({location}) => {
     return () => window.removeEventListener('scroll', scrollHandler);
   }, [top]);  
 
-
   return (
-  <header className={`fixed w-full z-30 inset-x-0 md:bg-opacity-90 transition lg:grid lg:px-12 px-4 duration-300 ease-in-out ${!top && 'bg-white backdrop-blur-sm shadow-md h-min'}`}>
-   <nav className="flex items-center justify-between md:p-4 lg:px-8" aria-label="Global">
+  <React.Fragment>
+    <header className={`hidden  md:block fixed w-full z-30 inset-x-0 md:bg-opacity-90 transition lg:grid lg:px-8 px-4 duration-300 ease-in-out ${!top && 'bg-white backdrop-blur-sm shadow-xs h-min border-b-[1px] border-slate-100'}`}>
+   <nav className="flex items-center justify-between md:p-1 lg:px-8" aria-label="Global">
        <div className="flex lg:flex-1">         
        <div className="flex items-center justify-between w-full lg:w-auto">
-        <div className="flex justify-between gap-36 w-full mt-2 items-center">
-          <div>
           <a href="/" className="flex items-center">
             <img
-              className="h-auto w-20 m-0 -mr-4 p-0"
+              className={`${!top && '-my-5 !h-22 -mr-6 !w-auto'} h-auto w-20 m-0 -mr-4 p-0`}
               src={shopclips_logo}
               alt="ShopClips Logo"
             />
@@ -69,19 +67,14 @@ const Header = ({location}) => {
               ShopClips
             </span>
           </a>
-          </div>
-          <div className="lg:hidden">
-          <MobileMenu />
-        </div>
-        </div>
-        
+
       </div>
            </div>
            <div className="hidden lg:flex lg:gap-x-12">
            {data.map((item, index) => (
              <Link
                key={index}
-               to={location?.pathname === '/' ? item.link : `${item.link}`}
+               to={location.pathname.includes("contact") ? `/#${item.link}` : `#${item.link}`}
                className='text-base font-medium text-gray-900 leading-6 hover:text-gray-700'
              >
                {item.name}
@@ -92,9 +85,27 @@ const Header = ({location}) => {
                {/* <Link to="/" className="py-2 px-4 rounded-lg text-black">Login</Link> */}
                <Link to="/contact" className="bg-indigo-500 py-2 px-4 rounded-lg text-white">Join Waitlist</Link>
                </div>
-               </nav>
-          
- </header>
+  
+  </nav>
+</header>
+
+<header 
+className={`md:hidden w-full flex items-center justify-between pr-4 py-0 fixed z-50 bg-opacity-90 transition duration-300 ease-in-out ${!top && 'bg-white backdrop-blur-sm shadow-xs border-b-[1px] border-slate-100'}`}>
+   <Link to="/" className="flex items-center ml-2">
+            <img
+              className="h-auto w-16 m-0 -mr-4 p-0"
+              src={shopclips_logo}
+              alt="ShopClips Logo"
+            />
+            <span className="ml-2 text-lg font-bold tracking-tight text-black sm:text-2xl">
+              ShopClips
+            </span>
+          </Link>
+<MobileMenu />
+
+</header>
+</React.Fragment>
+
    );
  };
 

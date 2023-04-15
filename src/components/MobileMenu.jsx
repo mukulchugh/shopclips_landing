@@ -24,10 +24,16 @@ export default function MobileMenu() {
     name: "FAQs",
     link: "#faqs",
   },
+  {
+    name: "Join Waitlist",
+    link: "contact",
+  }
   ];
 
+  // console.log(location);
+
   return (
-      <Menu as="div" className="relative inline-block text-left">
+      <Menu as="div" className="mr-2 border-none outline-none relative">
         <div>
           <Menu.Button className="inline-flex w-full justify-center rounded-md bg-opacity-20 px-2 py-2 text-display-sm font-bold hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
             <Bars3Icon
@@ -50,14 +56,17 @@ export default function MobileMenu() {
              {data.map((item, index) => (
                <Menu.Item key={index}>
                {({ active }) => (
-                   <Link
-                   to={item.href}
-                   className={`${
-                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700'
-                   } group flex rounded-md items-center w-full px-2 py-2 text-[14px] font-semibold text-sm]`}
-                 >
-                    {item.name}
-                 </Link>
+                 
+                    <Link
+                    to={location.pathname === '/' ? item.link : `/${item.link}`}
+                    className={`${
+                      active ? 'bg-gray-100 text-gray-900' : 'text-gray-700'
+                    } group flex rounded-md items-center w-full px-2 py-2 text-[14px] font-semibold text-sm]`}
+                  >
+
+                      {item.name}
+                  </Link>
+                  
                )}
              </Menu.Item>
               ))}

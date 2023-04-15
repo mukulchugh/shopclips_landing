@@ -35,11 +35,11 @@ export default function Features() {
     <div className="py-12 sm:py-14 text-white mt-12" id="features">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-indigo-600">features in short</h2>
+          <h2 className="text-base font-semibold leading-7 text-indigo-600 uppercase">features in short</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
           Get Started by yourself in under 10 minutes!
           </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
+          <p className="mt-6 text-sm md:text-lg leading-6 text-gray-600">
           Best way to grow is by converting more people who are already visiting your website! 
           Simply improves the website efficiency, without spending a dime on products or marketing!
           </p>
@@ -54,7 +54,7 @@ export default function Features() {
                   </div>
                   {feature.name}
                 </dt>
-                <dd className="mt-2 text-base leading-7 text-gray-600">{feature.description}</dd>
+                <dd className="mt-2 text-sm md:text-base md:leading-7 text-gray-600">{feature.description}</dd>
               </div>
             ))}
           </dl>
