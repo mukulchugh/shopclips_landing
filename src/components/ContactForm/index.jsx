@@ -7,8 +7,15 @@ function ContactForm() {
     const [selected, setSelected] = useState({title: 'India', value: 'IN'});
     const [query, setQuery] = useState('');
     const [agreed, setAgreed] = useState(false)
+    const [dialCode , setDialCode] = useState('+91')
 
     console.log(selected);
+
+    useEffect(() => {
+      const country = COUNTRIES.find((country) => country.value === selected.value)
+      setDialCode(country.dial_code)
+    }, [selected])
+
 
     function classNames(...classes) {
       return classes.filter(Boolean).join(' ')
@@ -35,7 +42,8 @@ function ContactForm() {
           Hehe! And yes, using Shopclips is indeed as fun as it sounds!
           </p>
                 <div className="flex justify-center items-center">
-                    <form className="" action="https://api.web3forms.com/submit" method="POST">
+                    {/* <form className="" action="https://api.web3forms.com/submit" method="POST"> */}
+                    <form action="https://public.herotofu.com/v1/59f91c00-dc47-11ed-ab6b-17ab4aa044e2" method="post" accept-charset="UTF-8">
                     <input type="hidden" name="access_key" value="523c5f1e-cc1c-418d-9ef5-13b50626245b" />
                     <div className="md:flex items-center mt-12 justify-between">
                         <div className="w-full flex flex-col">
@@ -54,15 +62,12 @@ function ContactForm() {
                         </div>
                         <div className="w-full flex flex-col md:ml-6 md:mt-0 mt-4">
                             <label className="text-base font-semibold leading-none text-gray-800">Website</label>
-                            <input aria-label="Please input website" type="website" name="Website" className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 " placeholder="ACME.com" />
+                            <input aria-label="Please input website" type="url" name="Website" className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 " placeholder="ACME.com" />
                         </div>
                     </div>
                     <div className="md:flex items-center mt-8 justify-center">
-                        <div className="w-full flex flex-col">
-                            <label className="text-base font-semibold leading-none text-gray-800">Phone Number</label>
-                            <input aria-label="Please input phone number" type="number" name="Number" className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 " placeholder="7888955543" />
-                        </div>
-                        <div className="flex flex-col md:ml-6 md:mt-0 mt-4">
+                        
+                          <div className="flex flex-col ">
                             <label className="text-base font-semibold leading-none text-gray-800">Country</label>
                             <div className="w-full">
       <Combobox value={selected} onChange={(v) => {
@@ -73,12 +78,12 @@ function ContactForm() {
         {selected ?  <img
               alt={`${selected.value}`}
               src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${selected.value}.svg`}
-              className={"inline h-6 ml-4 rounded-sm border-[1px] border-black p-0 mx-4 w-auto shadow-lg shadow-slate-300"}
+              className={"inline h-5 ml-4 rounded-sm border-[1px] border-black p-0 mx-4 w-auto shadow-lg shadow-slate-300"}
             /> : <span className="bg-black inline h-4 ml-6 w-6 rounded-sm p-0 m-0"></span>}
         <Combobox.Input
               name="Country"
               type="text"
-              className=" m-0 bg-transparent !border-none mr-16 p-4"
+              className="m-0 bg-transparent border-none mr-16 py-[0.8rem] px-2"
               displayValue={(country) => country.title}
               onChange={(event) => setQuery(event.target.value)}
               tabIndex={0} 
@@ -87,7 +92,7 @@ function ContactForm() {
             />
            <Combobox.Button>
               <ChevronUpDownIcon
-                className="h-5 w-auto text-gray-400 -ml-12"
+                className="h-6 w-auto text-gray-400 mr-12"
                 aria-hidden="true"
               />
             </Combobox.Button>
@@ -142,6 +147,14 @@ function ContactForm() {
       </Combobox>
     </div>
                         </div>
+                        <div className="w-full flex flex-col md:ml-6 md:mt-0 mt-4">
+                            <label className="text-base font-semibold leading-none text-gray-800">Phone Number</label>
+                          <span className="flex items-center gap-2">
+                              <input aria-label="Please input country code" type="text" name="Country Code" value={dialCode} readOnly className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 md:w-1/5 w-18" placeholder={setDialCode} />
+                            <input aria-label="Please input phone number" type="number" name="Number" className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 w-full" placeholder="7888955543" />
+                          </span>
+                        </div>
+                      
                     </div>
                     <div>
                         <div className="w-full flex flex-col mt-8 justify-center">
