@@ -94,7 +94,7 @@ Recommended
   <div className="flex items-baseline justify-center my-8">
  {plan?.isEnterprise ? (
           <React.Fragment>
-            <span className="mr-2 text-sm font-extrabold outline outline-1 px-4 py-2 w-full rounded-md">Let's Connect</span>
+            <span className="mr-2 text-sm font-extrabold outline outline-1 px-4 py-2 w-full rounded-md cursor-pointer">Let's Connect</span>
           </React.Fragment>
 
         ) : (
