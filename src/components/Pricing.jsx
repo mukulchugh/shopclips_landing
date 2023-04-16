@@ -41,22 +41,22 @@ export default function Pricing() {
 
   return (
     <section className="bg-gray-50" id="pricing">
-        <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
             <div className="lg:text-center">
                 <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Pricing</h2>
                 <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                     The right price for you, to grow your business
                 </p>
             </div>
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-        <div className="pb-10">
+      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-2">
+        <div className="pb-14">
           <Switch.Group
             as="div"
-            className="flex items-center justify-center ml-52"
+            className="flex items-center justify-center"
           >
-            <Switch.Label className="mr-4 text-lg">Monthly</Switch.Label>
-           <div className="flex items-center gap-4">
+           <div className="flex flex-col md:flex-row items-center gap-4 md:ml-60">
              <div>
+               <Switch.Label className="mr-4 text-sm md:text-lg">Monthly</Switch.Label>
               <Switch
               checked={isMonthly}
               onChange={setIsMonthly}
@@ -73,9 +73,9 @@ export default function Pricing() {
                 )}
               />
             </Switch>
-            <Switch.Label className="ml-4 text-lg">Yearly</Switch.Label>
+            <Switch.Label className="ml-4 text-sm md:text-lg">Yearly</Switch.Label>
             </div>
-            <p className="text-indigo-500">Billed once per year - <strong>Save 10%</strong></p>
+            <p className="text-indigo-500 text-sm md:text-lg">Billed once per year - <strong>Save 10%</strong></p>
            </div>
           </Switch.Group>
         </div>

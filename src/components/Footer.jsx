@@ -139,7 +139,7 @@ const Footer = () => {
         </ul>
       </div>
     </div> */}
-    <hr className="my-6 border-gray-200 sm:mx-auto  lg:my-8" />
+    <hr className="my-6 border-gray-200 sm:mx-auto border-none lg:my-0" />
     <div className="text-center">
       <a
         href="#"

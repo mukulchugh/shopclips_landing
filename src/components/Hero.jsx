@@ -1,10 +1,11 @@
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import React from "react";
-import heroImg from "../images/hero_img.png";
+import heroImg from "../images/hero_img.svg";
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 
 const Hero = ({Heading, Description}) => {
         return (  
-            <section className="text-black h-auto " id="hero-bg">
+            <section className="overflow-hidden text-black h-auto " id="hero-bg">
                 <div className="absolute inset-0 -z-10 overflow-hidden">
         <svg
           className="absolute top-0 left-[max(50%,25rem)] h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
@@ -32,7 +33,7 @@ const Hero = ({Heading, Description}) => {
         </svg>
       </div>
 <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
-            <svg className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]" viewBox="0 0 1155 678">
+            <svg className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-4rem)] sm:h-[50rem]" viewBox="0 0 1155 678">
               <path fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)" fillOpacity=".3" d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z" />
               <defs>
                 <linearGradient id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533" x1="1155.49" x2="-78.208" y1=".177" y2="474.645" gradientUnits="userSpaceOnUse">
@@ -44,10 +45,10 @@ const Hero = ({Heading, Description}) => {
           </div>
         <div className="relative isolate px-6 pt-14 lg:px-8">
 <div>  
-  <div className="mx-auto max-w-screen-lg  py-12 md:py-32 sm:py-48 lg:py-24 lg:pb-8">
+  <div className="mx-auto max-w-screen-lg  py-12 md:py-32 sm:py-48 lg:py-34 lg:pb-8">
             <div className="text-center flex flex-col justify-center items-center">
-              <h1 className="text-display-[4px] font-bold tracking-tight text-black md:text-display-xl">{Heading}</h1>
-              <p className="mt-6 md:text-body-xl md:leading-8 text-gray-400 text-body-xs md:px-24">{Description}</p>
+              <h1 className="text-display-[4px] p-0 md:-mb-2 font-bold tracking-tight text-black md:text-display-xl">{Heading}</h1>
+              <p className="mt-4 md:text-body-xl md:leading-8 text-gray-400 text-body-xs md:px-24">{Description}</p>
               {/* <div className="mt-10 flex items-center justify-center gap-x-6">
           <div className="mx-auto max-w-screen-md sm:text-center">
             <form action="#">
@@ -85,8 +86,7 @@ const Hero = ({Heading, Description}) => {
             </svg>
           </div> */}
         </div>
-<img src={heroImg} alt="hero" className="w-full h-full bg-transparent object-cover p-0 m-0 hidden md:block" />
-
+<StaticImage placeholder="blurred" layout="fullWidth" src="../images/hero_img.png" alt="hero" className="md:w-full h-auto bg-transparent object-cover p-0 md:my-24 m-0 mb-16 scale-150  md:scale-100" />
     </section>
         );
     }

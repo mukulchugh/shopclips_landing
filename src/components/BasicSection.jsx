@@ -4,11 +4,13 @@ import phone_view from "../images/phone_view_prod_ss.png";
 const BasicSection = ({reverse=false, title, body, features, end}) => {
   return (
     <section className="bg-white" id="how-it-works">
-  <div className="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-12 lg:px-6">
+  <div className="max-w-screen-xl px-4 pt-8 mx-auto space-y-12 lg:space-y-20 lg:py-12 lg:px-6">
     {/* Row */}
-    <div className="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-      <div className="text-gray-500 sm:text-lg da ">
-        <h2 className="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 ">
+    <div className="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-30">
+      <div className="text-gray-500 sm:text-lg">
+          <h2 className="text-base font-semibold leading-7 text-indigo-600 uppercase">How it works?</h2>
+
+        <h2 className="mb-4 text-3xl md:text-3xl font-extrabold tracking-tight text-gray-900 ">
         {title}
         </h2>
         <p className="mb-8 font-light lg:text-lg">
@@ -17,7 +19,7 @@ const BasicSection = ({reverse=false, title, body, features, end}) => {
         {/* List */}
         <ul
           role="list"
-          className="pt-8 space-y-5 border-t border-gray-200 my-7"
+          className="pt-8 md:space-y-6 border-t border-gray-200 my-7"
         >
         {features.map((feature, i) => (
               <li key={i} className="flex space-x-3">
@@ -34,7 +36,7 @@ const BasicSection = ({reverse=false, title, body, features, end}) => {
                   clipRule="evenodd"
                 />
               </svg>
-              <span className="text-base font-medium leading-tight text-gray-900 ">
+              <span className="text-sm md:text-base font-medium leading-tight text-gray-900 ">
                {feature}
               </span>
             </li>
@@ -46,8 +48,7 @@ const BasicSection = ({reverse=false, title, body, features, end}) => {
         </p>
       </div>
       <img
-        className={`${!reverse ? 'order-first' : 'order-last'} hidden h-4/6 w-auto mb-4 ml-18 rounded-lg lg:mb-0 lg:flex`}
-        // src="https://img.freepik.com/free-vector/preferences-concept-illustration_114360-1384.jpg?w=2000"
+        className={`${!reverse ? 'order-first' : 'order-last'} hidden h-auto md:w-full mb-4 ml-18 rounded-3xl lg:mb-0 lg:flex`}
         src={phone_view}
         alt="Phone View ShopClips image"
       />

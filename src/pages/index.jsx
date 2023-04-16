@@ -14,7 +14,17 @@ import { ArrowDownRightIcon, ArrowRightIcon } from "@heroicons/react/20/solid";
 const Index = () => (
   <Layout nav={true}>
     <Seo title="ShopClips" />
-    <Hero Heading={<><div className="flex items-center">Shoppable Clips <ArrowRightIcon width={45} className="mx-4" />  ShopClips <br/> </div><>For Shopify</></>} Description="
+    <Hero Heading={
+    <div>
+    <span className="hidden md:block">
+      <div className="flex items-center text-[24px] md:text-6xl">Shoppable Clips <ArrowRightIcon className="w-6 md:w-14 mx-0 md:mx-2" />  ShopClips <br/> </div><span className="text-[24px] md:text-6xl">For Shopify</span>
+    </span>
+    <span className="block md:hidden m-0 p-0 -mb-6">
+      <h2 className="w-full text-2xl">Shoppable Clips > ShopClips </h2>
+      <h2 className="w-full text-2xl m-0">For Shopify</h2>
+    </span>
+    </div>
+    } Description="
       Add shoppable videos to your shopify store to boost engagement, trust and sales with our interactive video platform.
     " />
     <BasicSection title="Boost your Shopify store sales with interactive and shoppable videos" 
