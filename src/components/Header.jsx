@@ -74,7 +74,7 @@ const Header = () => {
            {data.map((item, index) => (
              <Link
                key={index}
-               to={location.pathname.includes("contact") ? `/#${item.link}` : `#${item.link}`}
+               to={typeof window !== "undefined" && window?.location?.pathname.includes("contact") ? `/#${item.link}` : `#${item.link}`}
                className='text-base font-medium text-gray-900 leading-6 hover:text-gray-700'
              >
                {item.name}

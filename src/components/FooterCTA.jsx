@@ -12,9 +12,9 @@ const FooterCTA = () => {
                 </h2>
                 <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
                 <div className="ml-3 inline-flex rounded-md shadow">
-                        <a href="/contact" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white">
+                        {/* <a href="/contact" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white">
                             Learn more
-                        </a>
+                        </a> */}
                     </div>
                     <div className="inline-flex rounded-md shadow">
                         <a href="/contact" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600">

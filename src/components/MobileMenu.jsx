@@ -58,7 +58,7 @@ export default function MobileMenu() {
                {({ active }) => (
                  
                     <Link
-                    to={location.pathname === '/' ? item.link : `/${item.link}`}
+                    to={typeof window !== 'undefined' && window.location.pathname === '/' ? item.link : `/${item.link}`}
                     className={`${
                       active ? 'bg-gray-100 text-gray-900' : 'text-gray-700'
                     } group flex rounded-md items-center w-full px-2 py-2 text-[14px] font-semibold text-sm]`}
