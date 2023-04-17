@@ -53,7 +53,7 @@ const Header = () => {
 
   return (
   <React.Fragment>
-    <header className={`hidden  md:block fixed w-full z-30 inset-x-0 md:bg-opacity-90 transition lg:grid lg:px-8 px-4 duration-300 ease-in-out ${!top && 'bg-white backdrop-blur-sm shadow-xs h-min border-b-[1px] border-slate-100'}`}>
+    <header className={`hidden md:block fixed w-full z-30 inset-x-0 md:bg-opacity-90 transition lg:grid lg:px-8 px-4 duration-300 ease-in-out ${!top && 'bg-white backdrop-blur-sm shadow-xs h-min border-b-[1px] border-slate-100'}`}>
    <nav className="flex items-center justify-between md:p-1 lg:px-8" aria-label="Global">
        <div className="flex lg:flex-1">         
        <div className="flex items-center justify-between w-full lg:w-auto">
