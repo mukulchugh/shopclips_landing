@@ -33,7 +33,7 @@ export default function MobileMenu() {
   // console.log(location);
 
   return (
-      <Menu as="div" className="mr-2 border-none outline-none relative">
+      <Menu as="div" className="mr-1 p-0 m-0 border-none outline-none relative">
         <div>
           <Menu.Button className="inline-flex w-full justify-center rounded-md bg-opacity-20 px-2 py-2 text-display-sm font-bold hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
             <Bars3Icon

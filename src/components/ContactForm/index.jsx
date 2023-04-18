@@ -32,8 +32,8 @@ function ContactForm() {
         )
 
     return (
-      <section className="h-auto py-32 w-full">
-        <div className="container mx-auto px-6 ">
+      <section className="h-auto py-32 w-full overflow-hidden">
+        <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-8">
             Join our Waitlist
           </h2>
@@ -43,7 +43,7 @@ function ContactForm() {
           </p>
                 <div className="flex justify-center items-center">
                     {/* <form className="" action="https://api.web3forms.com/submit" method="POST"> */}
-                    <form action="https://public.herotofu.com/v1/59f91c00-dc47-11ed-ab6b-17ab4aa044e2" method="post" accept-charset="UTF-8">
+                    <form className="w-full lg:w-1/2 p-0 m-0" action="https://public.herotofu.com/v1/59f91c00-dc47-11ed-ab6b-17ab4aa044e2" method="post" acceptCharset="UTF-8">
                     <input type="hidden" name="access_key" value="523c5f1e-cc1c-418d-9ef5-13b50626245b" />
                     <div className="md:flex items-center mt-12 justify-between">
                         <div className="w-full flex flex-col">
