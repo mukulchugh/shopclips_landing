@@ -18,10 +18,10 @@ const data = [
     name: "Features",
     link: "features",
   },
-  {
-    name: "Pricing",
-    link: "pricing",
-  },
+  // {
+  //   name: "Pricing",
+  //   link: "pricing",
+  // },
   {
     name: "FAQs",
     link: "faqs",
