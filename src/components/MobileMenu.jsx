@@ -16,10 +16,10 @@ export default function MobileMenu() {
     name: "Features",
     link: "#features",
   },
-  {
-    name: "Pricing",
-    link: "#pricing",
-  },
+  // {
+  //   name: "Pricing",
+  //   link: "#pricing",
+  // },
   {
     name: "FAQs",
     link: "#faqs",
