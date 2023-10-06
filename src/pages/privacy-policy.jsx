@@ -36,92 +36,63 @@ const PrivacyPolicy = () => {
          
             <div>
                 <React.Fragment>
-                    <h1>Privacy Policy</h1>
-                    <p>Effective date: January 01, 2021</p>
-                    <p>Company Name ("us", "we", or "our") operates the https://www.companyname.com website (the "Service").</p>
-                    <p>This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data. Our Privacy Policy for Company Name is created with the help of the <a href="https://www.freeprivacypolicy.com/free-privacy-policy-generator.php">Free Privacy Policy Generator</a>.</p>
-                    <p>We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, accessible from https://www.companyname.com</p>
-                    <h2>Information Collection And Use</h2>
-                    <p>We collect several different types of information for various purposes to provide and improve our Service to you.</p>
-                    <h3>Types of Data Collected</h3>
-                    <h4>Personal Data</h4>
-                    <p>While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to:</p>
+                    <h2 className="block text-center">Our Privacy Policy</h2>
+                    
+                    <br></br>
+                    <p className="block text-center">Shopclips website together with its content, subdomains, tools and services, the (“Site”).</p>      
+                    <br></br>
+                    <p>We value your privacy and your privacy is very important to us. To best protect your privacy, we provide this privacy policy (“Privacy Policy”) explaining our online information practices and the choices you can make about the way your information is collected and used at this Site.</p>             
+                    <br></br>
+                    <h4>Consent and Modification</h4>
+                    <br></br>
+                    <p> By using Shopclips (The Site), you consent to the terms of our Privacy Policy and our processing of Personal Information for the purposes as discussed in this Policy. We encourage you to periodically review this page for the latest information on our privacy practices. If you do not agree to this Privacy Policy, please do not use our Site or Service. We reserve the right to change this Privacy Policy at any time, and the change will be effective immediately following the revised Privacy Policy on the Site for both existing users and new users.</p>
+                    <br></br>
+                    <h4>Information We Collect</h4>
+                    <br></br>
+                    <p> <span className="font-semibold leading-7 text-gray-900"> Personal Information: </span> When you install and use Shopclips, we may collect personal information, including but not limited to your name, email address, and Shopify store information. This information is necessary for app functionality and to provide you with customer support.</p>
+                    <p> <span className="font-semibold leading-7 text-gray-900"> Usage Information: </span> We collect information related to your use of our app, including videos, images or any other media you submit on our app, data of the products you tag on those media, your traffic's activities and interactions with shoppable videos in order to give you the analytics of our plugin.</p>
+                    <br></br>
+                    <h4>How We Use Your Information</h4>
+                    <br></br>
+                    <p> <span className="font-semibold leading-7 text-gray-900"> To Provide and Improve the Service: </span> We use your information to operate, maintain, and enhance our app, including optimizing the user experience, developing new features, and troubleshooting issues.</p>
+                    <p> <span className="font-semibold leading-7 text-gray-900"> Communication: </span> We may use your email address to send you important updates, notifications, and responses to your inquiries.</p>
+                    <p> <span className="font-semibold leading-7 text-gray-900"> Customer Support: </span> We use your information to respond to your requests, comments, or questions and provide customer support.</p>
+                    <br></br>
+                    <h4>Data Sharing and Disclosure</h4>
+                    <br></br>
+                    <p> <span className="font-semibold leading-7 text-gray-900"> Shopify: </span> Shopclips is designed for the Shopify platform, and we may share your information with Shopify as necessary to operate the app and comply with Shopify's policies.</p>
+                    <p> <span className="font-semibold leading-7 text-gray-900"> Third-Party Service Providers: </span> We may use third-party service providers to assist with app functionality, analytics, and other services. These providers may have access to your personal information, but only to the extent required to perform their functions.</p>
+                    <p> <span className="font-semibold leading-7 text-gray-900"> Legal Compliance: </span> We may share your information when required by law or to protect our rights, privacy, safety, or property.</p>
+                    <br></br>
+                    <h4>Your Choices</h4>
+                    <br></br>
+                    <p> <span className="font-semibold leading-7 text-gray-900"> Opt-Out: </span> You may opt-out of receiving promotional emails from us by following the unsubscribe instructions in those emails.</p>
+                    <p> <span className="font-semibold leading-7 text-gray-900"> Access and Correction: </span> You have the right to access, update, or correct your personal information. You can do this by contacting us at team@shopclips.app.</p>
+                    <br></br>
+                    <h4>Data Security</h4>
+                    <br></br>
+                    <p>We implement security measures to protect your personal information from unauthorized access, disclosure, alteration, and destruction. However, no method of data transmission over the internet or electronic storage is completely secure, so we cannot guarantee its absolute security.</p>
+                    <br></br>
+                    <h4>Changes</h4>
+                    <br></br>
+                    <p>We may update this privacy policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal or regulatory reasons.</p>
+                    <br></br>
+                    <h4>Commitment</h4>
+                    <br></br>
+                    <p>Thank you for choosing Shopclips. Your privacy is important to us, and we are committed to protecting your data and providing you with a safe and enjoyable user experience. We are committed to protecting your privacy. Protecting your privacy online is an evolving area, and accordingly, we are constantly evolving the Site to meet these demands.</p>
+                    <br></br>
+                    <h4>Contact Us</h4>
+                    <br></br>
+                    <p>If you have any questions, concerns, or requests related to this Privacy Policy or your personal information, please contact us:</p>
                     <ul>
-                        <li>Email address</li><li>First name and last name</li><li>Cookies and Usage Data</li>
-                    </ul>
-                    <h4>Usage Data</h4>
-                    <p>We may also collect information how the Service is accessed and used ("Usage Data"). This Usage Data may include information such as your computer's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
-                    <h4>Tracking & Cookies Data</h4>
-                    <p>We use cookies and similar tracking technologies to track the activity on our Service and hold certain information.</p>
-                    <p>Cookies are files with small amount of data which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your device. Tracking technologies also used are beacons, tags, and scripts to collect and track information and to improve and analyze our Service.</p>
-                    <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.</p>
-                    <p>Examples of Cookies we use:</p>
-                    <ul>
-                        <li><strong>Session Cookies.</strong> We use Session Cookies to operate our Service.</li>
-                        <li><strong>Preference Cookies.</strong> We use Preference Cookies to remember your preferences and various settings.</li>
-                        <li><strong>Security Cookies.</strong> We use Security Cookies for security purposes.</li>
-                    </ul>
-                    <h2>Use of Data</h2>
-                    <p>Company Name uses the collected data for various purposes:</p>
-                    <ul>
-                        <li>To provide and maintain the Service</li>
-                        <li>To notify you about changes to our Service</li>
-                        <li>To allow you to participate in interactive features of our Service when you choose to do so</li>
-                        <li>To provide customer care and support</li>
-                        <li>To provide analysis or valuable information so that we can improve the Service</li>
-                        <li>To monitor the usage of the Service</li>
-                        <li>To detect, prevent and address technical issues</li>
-                    </ul>
-                    <h2>Transfer Of Data</h2>
-
-                    <p>Your information, including Personal Data, may be transferred to — and maintained on — computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from your jurisdiction.</p>
-                    <p>If you are located outside United States and choose to provide information to us, please note that we transfer the data, including Personal Data, to United States and process it there.</p>
-                    <p>Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.</p>
-                    <p>Company Name will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of your data and other personal information.</p>
-                    <h2>Disclosure Of Data</h2>
-                    <h3>Legal Requirements</h3>
-                    <p>Company Name may disclose your Personal Data in the good faith belief that such action is necessary to:</p>
-                    <ul>
-                        <li>To comply with a legal obligation</li>
-                        <li>To protect and defend the rights or property of Company Name</li>
-                        <li>To prevent or investigate possible wrongdoing in connection with the Service</li>
-                        <li>To protect the personal safety of users of the Service or the public</li>
-                        <li>To protect against legal liability</li>
-                    </ul>
-                    <h2>Security Of Data</h2>
-                    <p>The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.</p>
-                    <h2>Service Providers</h2>
-                    <p>We may employ third party companies and individuals to facilitate our Service ("Service), to provide the Service on our behalf, to perform Service-related services or to assist us in analyzing how our Service is used.</p>
-                    <p>These third parties have access to your Personal Data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
-                    <h3>Analytics</h3>
-                    <p>We may use third-party Service Providers to monitor and analyze the use of our Service.</p>
-                    <ul>
-                        <li>
-                            <p><strong>Google Analytics</strong></p>
-                            <p>Google Analytics is a web analytics service offered by Google that tracks and reports website traffic. Google uses the data collected to track and monitor the use of our Service. This data is shared with other Google services. Google may use the collected data to contextualize and personalize the ads of its own advertising network.</p>
-                            <p>You may opt-out of certain Google Analytics features through your mobile device settings, such as your device advertising settings or by following the instructions provided by Google in their Privacy Policy: <a href="https://policies.google.com/privacy?hl=en">https://policies.google.com/privacy?hl=en</a></p>
-                            <p>For more information on the privacy practices of Google, please visit the Google Privacy & Terms web page: <a href="https://policies.google.com/privacy?hl=en">https://policies.google.com/privacy?hl=en</a></p>
+                        <li>By Email: team@shopclips.app
+                        </li>
+                        <li>By Phone: 7620487415
                         </li>
                     </ul>
-                    <h2>Links To Other Sites</h2>
-                    <p>Our Service may contain links to other sites that are not operated by us. If you click on a third party link, you will be directed to that third site. We strongly advise you to review the Privacy Policy of every site you visit.</p>
-                    <p>We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
-                    <h2>Children's Privacy</h2>
-                    <p>Our Service does not address anyone under the age of 18 ("Children").</p>
+                    <br></br>
+                    <p>Last Modified: Oct 6, 2023</p>
 
-                    <p>We do not knowingly collect personally identifiable information from anyone under the age of 18. If you are a parent or guardian and you are aware that your Children has provided us with Personal Data, please contact us. If we become aware that we have collected Personal Data from children without verification of parental consent, we take steps to remove that information from our servers.</p>
-                    <p>If you are a minor, you must have your parent or guardian's permission to use this website.</p>
-                    <h2>Changes To This Privacy Policy</h2>
-                    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
-                    <p>We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the at the top of this Privacy Policy.</p>
-                    <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
-                    <h2>Contact Us</h2>
-                    <p>If you have any questions about this Privacy Policy, please contact us:</p>
-                    <ul>
-                        <li>By email:
-                            <a href="mailto:" target="_blank" rel="noreferrer"> </a>
-                        </li>
-                    </ul>
                 </React.Fragment>
             </div>
         </div>
