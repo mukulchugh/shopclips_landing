@@ -68,7 +68,7 @@ const Footer = () => {
         </h3>
         <ul className="text-gray-500 ">
           <li className="mb-4">
-            <a href="#" className="hover:underline">
+            <a href="/privacy-policy" className="hover:underline">
               Privacy Policy
             </a>
           </li>
@@ -142,7 +142,7 @@ const Footer = () => {
     <hr className="my-6 border-gray-200 sm:mx-auto border-none lg:my-0" />
     <div className="text-center">
       <a
-        href="#"
+        href="/"
         className="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 gap-2"
       >
           <img
@@ -154,6 +154,11 @@ const Footer = () => {
       </a>
       <span className="block text-sm text-center text-gray-500 ">
         © {new Date().getFullYear()} ShopClips™. All Rights Reserved.
+      </span>
+      <span className="block text-sm text-center text-gray-500 ">
+        <a href="/privacy-policy" className="hover:underline">
+          Privacy Policy
+        </a>
       </span>
       {/* <ul className="flex justify-center mt-5 space-x-5">
         <li>
