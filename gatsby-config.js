@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `ShopClips Live`,
     description: `Sample description for website landing page.`,
-    siteUrl: `https://shopclips.live`, // Replace with your domain name
+    siteUrl: `https://shopclips.app`, // Replace with your domain name
     author: `@mukulchugh`, // Replace with your twitter handle
   },
   plugins: [
@@ -30,8 +30,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `ShopClips.Live`,
-        short_name: `ShopClips`,
+        name: `Shopclips.app`,
+        short_name: `Shopclips`,
         start_url: `/`,
         background_color: `#7C3AED`,
         theme_color: `#7C3AED`,
