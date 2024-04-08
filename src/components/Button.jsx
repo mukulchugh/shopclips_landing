@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "gatsby";
 
 const Button = ({ label, link, size, className, icon = true, url = false, onPress}) => {
-  return onPress ? <button className={`cursor-pointer whitespace-nowrap flex items-center justify-center rounded-md bg-indigo-500 text-black font-semibold  ${
+  return onPress ? <button className={`cursor-pointer  whitespace-nowrap flex items-center justify-center rounded-md bg-indigo-500 text-black font-semibold  ${
     size === "lg" ? "px-4 py-3 text-body-md" : "px-3 py-2 text-[12px]"} ${className} `} onClick={() => onPress()}>{label}</button> : url ? (
     <a
 

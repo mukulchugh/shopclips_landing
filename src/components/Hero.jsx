@@ -122,12 +122,13 @@ const Hero = ({Heading, Description}) => {
             </form>
           </div>
               </div> */}
-  <div className="mt-10 flex items-center justify-center gap-x-6">
-<Button label="Get Started for Free" url={true} link="https://apps.shopify.com/shopclips-shoppable-clips" className="bg-indigo-500 border-indigo-500 border py-3 px-6 rounded-lg text-white"/>
+  <div className="mt-10 flex items-center justify-center gap-x-4">
+<Button label="Get Started for Free" url={true} link="https://apps.shopify.com/shopclips-shoppable-clips" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600"/>
 <Button icon={false} onPress={()=> {
   setOpen(true);
-  console.log(open)
-}} label="Book a Demo" className="bg-transparent py-2 h-[44px] px-6 rounded-lg text-black border border-black"/>
+}} label="Book a Demo" className="inline-flex items-center justify-center px-5 py-[11.5px] text-base font-medium rounded-md border border-black bg-transparent text-black  hover:bg-black hover:text-white"/>
+
+
 
 </div>
             </div>

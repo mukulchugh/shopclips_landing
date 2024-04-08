@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "gatsby";
 import MobileMenu from "./MobileMenu";
 import shopclips_logo from "../images/shopclips_logo_tr.png";
+import Button from "./Button";
 // import MobileMenu from "./mobileMenu";
 
 
@@ -26,10 +27,10 @@ const data = [
     name: "FAQs",
     link: "faqs",
   },
-  // {
-  //   name: "Contact",
-  //   link: "contact",
-  // },
+  {
+    name: "Contact",
+    link: "contact",
+  },
   // {
   //   name: "Blog",
   //   link: "blog",
@@ -74,7 +75,7 @@ const Header = () => {
            {data.map((item, index) => (
              <Link
                key={index}
-               to={typeof window !== "undefined" && window?.location?.pathname.includes("contact") ? `/#${item.link}` : `#${item.link}`}
+               to={ item.name !== "Contact" ? (typeof window !== "undefined" && window?.location?.pathname.includes("contact"))  ? `/#${item.link}` : `#${item.link}` : `/${item.link}` }
                className='text-base font-medium text-gray-900 leading-6 hover:text-gray-700'
              >
                {item.name}
@@ -83,7 +84,7 @@ const Header = () => {
              </div>
              <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center text-[16px] font-semibold gap-4">
                {/* <Link to="/" className="py-2 px-4 rounded-lg text-black">Login</Link> */}
-               <Link to="/contact" className="bg-indigo-500 py-2 px-4 rounded-lg text-white">Contact</Link>
+               <Button label="Get Started" url={true} link="https://apps.shopify.com/shopclips-shoppable-clips" className="bg-indigo-500 hover:bg-indigo-600 border-indigo-500 border py-3 px-6 rounded-lg text-white"/>
                </div>
 
   </nav>
