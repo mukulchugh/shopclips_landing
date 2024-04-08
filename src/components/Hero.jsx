@@ -126,7 +126,11 @@ const Hero = ({Heading, Description}) => {
 <Button label="Get Started for Free" url={true} link="https://apps.shopify.com/shopclips-shoppable-clips" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600"/>
 <Button icon={false} onPress={()=> {
   setOpen(true);
-}} label="Book a Demo" className="inline-flex items-center justify-center px-5 py-[11.5px] text-base font-medium rounded-md border border-black bg-transparent text-black  hover:bg-black hover:text-white"/>
+}} label="Book a Demo" className="inline-flex items-center justify-center px-5 py-[11.5px] text-base font-medium rounded-md border border-black bg-transparent text-black hover:bg-black hover:text-white
+transition-all
+duration-900
+ease-in-out
+"/>
 
 
 
