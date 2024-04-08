@@ -35,7 +35,7 @@ function ContactForm() {
       <section className="h-auto py-32 w-full overflow-hidden">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-8">
-            Join our Waitlist
+            Contact Us
           </h2>
           <p className="text-gray-600 text-center ">
           Welcome to the world of video commerce! The inevitable future of online shopping! {<br/>}
@@ -66,7 +66,7 @@ function ContactForm() {
                         </div>
                     </div>
                     <div className="md:flex items-center mt-8 justify-center">
-                        
+
                           <div className="flex flex-col ">
                             <label className="text-base font-semibold leading-none text-gray-800">Country</label>
                             <div className="w-full">
@@ -86,8 +86,8 @@ function ContactForm() {
               className="m-0 bg-transparent border-none mr-16 py-[0.8rem] px-2"
               displayValue={(country) => country.title}
               onChange={(event) => setQuery(event.target.value)}
-              tabIndex={0} 
-              aria-label="Please input country name"  
+              tabIndex={0}
+              aria-label="Please input country name"
               placeholder="e.g. India"
             />
            <Combobox.Button>
@@ -154,7 +154,7 @@ function ContactForm() {
                             <input aria-label="Please input phone number" type="number" name="Number" className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 w-full" placeholder="7888955543" />
                           </span>
                         </div>
-                      
+
                     </div>
                     <div>
                         <div className="w-full flex flex-col mt-8 justify-center">
@@ -163,7 +163,7 @@ function ContactForm() {
                         </div>
                     </div>
 
-                   
+
     <input type="hidden" name="subject" value="ShopClips Contact Form Submission"/>
     <input type="hidden" name="replyto" value="contact@shopsclip.live"/>
                     <Switch.Group as="div" className="flex gap-x-4 sm:col-span-2 mt-4">
@@ -199,7 +199,7 @@ function ContactForm() {
                 </form>
                 </div>
             </div>
-            </section>  
+            </section>
     );
 }
 

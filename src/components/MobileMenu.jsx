@@ -7,7 +7,7 @@ import { Link } from "gatsby";
 
 export default function MobileMenu() {
   const data = [
-   
+
    {
     name: "How It Works?",
     link: "#how-it-works",
@@ -25,7 +25,7 @@ export default function MobileMenu() {
     link: "#faqs",
   },
   {
-    name: "Join Waitlist",
+    name: "Contact",
     link: "contact",
   }
   ];
@@ -56,7 +56,7 @@ export default function MobileMenu() {
              {data.map((item, index) => (
                <Menu.Item key={index}>
                {({ active }) => (
-                 
+
                     <Link
                     to={typeof window !== 'undefined' && window.location.pathname === '/' ? item.link : `/${item.link}`}
                     className={`${
@@ -66,7 +66,7 @@ export default function MobileMenu() {
 
                       {item.name}
                   </Link>
-                  
+
                )}
              </Menu.Item>
               ))}
