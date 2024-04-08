@@ -17,7 +17,7 @@ const FooterCTA = () => {
                         </a> */}
                     </div>
                     <div className="inline-flex rounded-md shadow">
-                        <a href="/contact" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600">
+                        <a href="https://apps.shopify.com/shopclips-shoppable-clips" className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600">
                             Get started
                             <ArrowRightIcon
                                 className="-mr-1 ml-3 h-5 w-5"
@@ -26,7 +26,7 @@ const FooterCTA = () => {
 
                         </a>
                     </div>
-                  
+
                 </div>
             </div>
         </div>
