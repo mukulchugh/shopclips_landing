@@ -1,10 +1,63 @@
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
-import React from "react";
+import React, {Fragment, useEffect, useState} from "react";
 import heroImg from "../images/hero_img.svg";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import Button from "./Button";
+import { Dialog, Transition } from '@headlessui/react'
+
 
 const Hero = ({Heading, Description}) => {
-        return (  
+  const [open, setOpen] = useState(false);
+
+  return (
+          <>
+<Transition appear show={open} as={Fragment}>
+        <Dialog
+          as="div"
+          className="fixed inset-0 z-10 overflow-y-auto"
+          onClose={setOpen}
+        >
+          <div className="min-h-screen px-4 text-center">
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <Dialog.Overlay className="fixed inset-0 bg-black opacity-30" />
+            </Transition.Child>
+
+            {/* This element is to trick the browser into centering the modal contents. */}
+            <span
+              className="inline-block h-screen align-middle"
+              aria-hidden="true"
+            >
+              &#8203;
+            </span>
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0 scale-95"
+              enterTo="opacity-100 scale-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-95"
+            >
+              <div className="inline-block h-[700px] w-[900px] z-50 w-full max-w-xl my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+                <iframe
+                  src="https://calendly.com/abhinav-shopclips/30min"
+                  width="100%"
+                  height="100%"
+                  title="Schedule a Meeting"
+                ></iframe>
+              </div>
+            </Transition.Child>
+          </div>
+        </Dialog>
+      </Transition>
             <section className="overflow-hidden text-black h-auto " id="hero-bg">
                 <div className="absolute inset-0 -z-10 overflow-hidden">
         <svg
@@ -38,13 +91,13 @@ const Hero = ({Heading, Description}) => {
               <defs>
                 <linearGradient id="45de2b6b-92d5-4d68-a6a0-9b9b2abad533" x1="1155.49" x2="-78.208" y1=".177" y2="474.645" gradientUnits="userSpaceOnUse">
                   <stop stopColor="#9089FC" />
-                  <stop offset={1} stopColor="#FF80B5" />
+                   <stop offset={1} stopColor="#FF80B5" />
                 </linearGradient>
               </defs>
             </svg>
           </div>
         <div className="relative isolate px-6 pt-14 lg:px-8">
-<div>  
+<div>
   <div className="mx-auto max-w-screen-lg  py-12 md:py-32 sm:py-48 lg:py-34 lg:pb-8">
             <div className="text-center flex flex-col justify-center items-center">
               <h1 className="text-display-[4px] p-0 md:-mb-2 font-bold tracking-tight text-black md:text-display-xl">{Heading}</h1>
@@ -61,7 +114,7 @@ const Hero = ({Heading, Description}) => {
                   <input className="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg focus:ring-primary-500 focus:border-primary-500 " placeholder="Enter your email" type="email" id="email" required />
                 </div>
                 <div>
-                  <button type="submit" className="flex items-center py-3 px-5 w-full justify-center text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-indigo-500 border-indigo-500 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 whitespace-nowrap">Get Started <ArrowRightIcon 
+                  <button type="submit" className="flex items-center py-3 px-5 w-full justify-center text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-indigo-500 border-indigo-500 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 whitespace-nowrap">Get Started <ArrowRightIcon
                     className="w-5 h-5 ml-2"/> </button>
                 </div>
               </div>
@@ -69,6 +122,14 @@ const Hero = ({Heading, Description}) => {
             </form>
           </div>
               </div> */}
+  <div className="mt-10 flex items-center justify-center gap-x-6">
+<Button label="Get Started for Free" url={true} link="https://apps.shopify.com/shopclips-shoppable-clips" className="bg-indigo-500 border-indigo-500 border py-3 px-6 rounded-lg text-white"/>
+<Button icon={false} onPress={()=> {
+  setOpen(true);
+  console.log(open)
+}} label="Book a Demo" className="bg-transparent py-2 h-[44px] px-6 rounded-lg text-black border border-black"/>
+
+</div>
             </div>
           </div>
           </div>
@@ -88,7 +149,12 @@ const Hero = ({Heading, Description}) => {
         </div>
 <StaticImage placeholder="blurred" layout="fullWidth" src="../images/hero_img.png" alt="hero" className="md:w-full h-auto bg-transparent object-cover p-0 md:my-24 m-0 mb-16 scale-150  md:scale-100" />
     </section>
+    </>
         );
     }
-  
+
 export default Hero;
+
+
+
+
