@@ -1,0 +1,30 @@
+.scrollContainer {
+  overflow: hidden;
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scrollContent {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  min-width: 100%;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.brandImage {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
