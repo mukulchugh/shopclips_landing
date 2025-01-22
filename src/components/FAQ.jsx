@@ -1,6 +1,6 @@
-import React, {Fragment} from 'react'
 import { Disclosure, Transition } from '@headlessui/react'
-import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline'
+import { ChevronDownIcon } from '@heroicons/react/24/outline'
+import React,{ Fragment } from 'react'
 
 
 const data = [
