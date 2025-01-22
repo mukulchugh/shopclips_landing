@@ -15,21 +15,26 @@ const BrandShowcase = () => {
           Trusted by the best in the industry
         </p>
       </div>
-    <div className="mx-auto mt-8 max-w-2xl sm:mt-20 lg:mt-12 lg:max-w-7xl">
-    <div className="relative w-full overflow-hidden bg-white">
+    <div className="mx-auto mt-2 max-w-2xl lg:mt-2 lg:max-w-screen-2xl">
+    <div className="relative w-full overflow-hidden bg-white py-10">
       {/* Gradient overlays */}
       <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10" />
       <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10" />
 
-      <div className="flex animate-scroll transition-transform duration-500 ease-in-out -translate-x-0 hover:-translate-x-1">
-        <div className="flex shrink-0">
+      <div className="flex animate-scroll will-change-transform">
+        {/* <div className="flex shrink-0"> */}
           <img
             src="../brand-showcase.webp"  
             alt="Our Brand Partners"
-            className="w-full h-[100px] max-w-none object-contain"
+            className="h-22 w-auto max-w-none object-contain"
+            style={{
+              imageRendering: '-webkit-optimize-contrast',
+              transform: 'translateZ(0)',
+
+            }}
             draggable="false"
           />
-        </div>
+        {/* </div> */}
       </div>
     </div>
   </div>
